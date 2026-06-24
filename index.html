@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Free WiFi Login</title>
+
+    <style>
+        body{
+            margin:0;
+            background:black;
+            color:white;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            flex-direction:column;
+            font-family:Arial,sans-serif;
+            overflow:hidden;
+        }
+
+        #gorilla{
+            display:none;
+            width:100%;
+            height:100vh;
+        }
+
+        img{
+            width:100%;
+            height:100vh;
+            object-fit:cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="loading">
+        <h1>Verbinde mit WLAN...</h1>
+        <p>Bitte warten...</p>
+    </div>
+
+    <div id="gorilla">
+        <img src="gorilla.jpg" alt="Gorilla">
+    </div>
+
+    <script>
+        setTimeout(() => {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('gorilla').style.display = 'block';
+        }, 3000);
+    </script>
+
+</body>
+</html>
